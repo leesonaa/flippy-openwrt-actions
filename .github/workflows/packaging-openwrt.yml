@@ -92,7 +92,7 @@ jobs:
         run: |
           # Custom repository and Releases keywords for *rootfs.tar.gz file
           armvirt_rootfsfile_repo="leesonaa/PackageRootfs_OpenWrt"
-          releases_tag_keywords="OpenWrt_.*lede.*/.*rootfs.tar.gz"
+          releases_tag_keywords="openwrt-armvirt-64-default-rootfs.tar.gz"
           #
           # The following download paths, etc. can remain unchanged
           save_rootfsfile_path="openwrt/bin/targets/armvirt/64"
