@@ -81,7 +81,7 @@ jobs:
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Compile the kernel
-        uses: ophub/amlogic-s9xxx-armbian@main
+        uses: leesonaa/flippy-openwrt-actions@main
         if: ${{ steps.init.outputs.status }} == 'success' && !cancelled()
         with:
           build_target: kernel
@@ -95,6 +95,8 @@ jobs:
       - name: Upload Kernel to Release
         uses: softprops/action-gh-release@v1
         if: ${{ env.PACKAGED_STATUSS }} == 'success' && !cancelled()
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag: kernel_${{ env.PACKAGED_OUTPUTTAGS }}
           artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
