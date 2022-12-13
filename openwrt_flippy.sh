@@ -77,6 +77,12 @@ SCRIPT_S922X_N2_FILE="mk_s922x_odroid-n2.sh"
 SCRIPT_QEMU_FILE="mk_qemu-aarch64_img.sh"
 SCRIPT_DIY_FILE="mk_diy.sh"
 
+# Set OpenWrt firmware size (Unit: MiB, SKIP_MB >= 4, BOOT_MB >= 256, ROOT_MB >= 512)
+SKIP_MB="16"
+BOOT_MB="160"
+ROOT_MB="400"
+
+
 # Set make.env related parameters
 WHOAMI_VALUE="flippy"
 OPENWRT_VER_VALUE="auto"
