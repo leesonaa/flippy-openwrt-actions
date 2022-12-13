@@ -380,6 +380,8 @@ make_openwrt() {
                     fi
 
                     # Generate a custom make.env file
+                    #设置rootfs大小为400M
+                    sed -i s'/ROOTFS_MB=960/ROOTFS_MB=400/g' ./mk_rk3568_h68k.sh
                     rm -f make.env 2>/dev/null
                     cat >make.env <<EOF
 WHOAMI="${WHOAMI}"
@@ -398,6 +400,7 @@ EOF
 
                     echo -e "${INFO} make.env file info:"
                     cat make.env
+                    cat mk_rk3568_h68k.sh
 
                     # Select the corresponding packaging script
                     case "${PACKAGE_VAR}" in
