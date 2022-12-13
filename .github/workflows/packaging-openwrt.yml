@@ -107,10 +107,6 @@ jobs:
           [[ "${?}" -ne "0" ]] && echo -e "The armvirt file download failed!" && exit 1
           echo "status=success" >> ${GITHUB_OUTPUT}
           
-          #设置rootfs大小为400M
-          #sed -i s'/ROOTFS_MB=960/ROOTFS_MB=400/g' /opt/openwrt_packit/mk_rk3568_h68k.sh
-          ls
-          
       - name: Package OpenWrt Firmware
         uses: leesonaa/flippy-openwrt-actions@main
         if: ${{ steps.download.outputs.status }} == 'success' && !cancelled()
