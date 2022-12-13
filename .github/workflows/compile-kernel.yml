@@ -98,7 +98,7 @@ jobs:
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag: kernel_${{ env.PACKAGED_OUTPUTTAGS }}
+          tag_name: kernel_${{ env.PACKAGED_OUTPUTTAGS }}
           artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
           allowUpdates: true
           #token: ${{ secrets.GH_TOKEN }}
