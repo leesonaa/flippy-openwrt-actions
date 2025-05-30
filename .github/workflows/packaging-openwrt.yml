@@ -111,12 +111,12 @@ on:
       builder_name:
         description: "Set OpenWrt builder signature."
         required: false
-        default: "ophub"
+        default: "leeson"
         type: choice
         options:
           - ophub
           - angel
-          - yourname
+          - leeson
 
 env:
   TZ: America/New_York
@@ -229,7 +229,8 @@ jobs:
           CUSTOMIZE_RK3399: ${{ inputs.customize_rk3399 }}
           SCRIPT_DIY_PATH: ${{ inputs.script_diy_path }}
           WHOAMI: ${{ inputs.builder_name }}
-
+          SFE_FLOW: "0"
+          
       - name: Upload OpenWrt Firmware to Release
         uses: ncipollo/release-action@main
         if: ${{ env.PACKAGED_STATUS }} == 'success' && !cancelled()
