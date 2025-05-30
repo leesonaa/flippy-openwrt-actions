@@ -203,7 +203,7 @@ jobs:
           curl -fsSL "${latest_url}" -o "${armvirt_tarfile_path}/${openwrt_filename}"
           [[ "${?}" -ne "0" ]] && echo "Invalid OpenWrt rootfs download address." && exit 1
 
-          echo "build_tag=${releases_tag_keywords}_${{ inputs.openwrt_storage }}_$(date +"%Y.%m")" >> ${GITHUB_OUTPUT}
+          echo "build_tag=${releases_tag_keywords}_${{ inputs.openwrt_storage }}_$(date +"%Y.%m.%s")" >> ${GITHUB_OUTPUT}
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Clone packit source code
@@ -249,7 +249,5 @@ jobs:
             - Default WIFI password: none
             ### Install to EMMC
             - Login to OpenWrt → System → Amlogic Service → Install OpenWrt
-            ### OpenWrt source code
-            - [lede](https://github.com/coolsnowwolf/lede)
             ### OpenWrt Image Verification
             - sha256sum
