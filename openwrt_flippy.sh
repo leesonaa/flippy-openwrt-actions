@@ -20,8 +20,8 @@
 #=============================== Set make environment variables ===============================
 #
 # Set the default package source download repository
-SCRIPT_REPO_URL_VALUE="https://github.com/unifreq/openwrt_packit"
-SCRIPT_REPO_BRANCH_VALUE="master"
+SCRIPT_REPO_URL_VALUE="https://github.com/leesonaa/openwrt_packit"
+SCRIPT_REPO_BRANCH_VALUE="main"
 
 # Set the *rootfs.tar.gz package save name
 PACKAGE_FILE="openwrt-armsr-armv8-generic-rootfs.tar.gz"
