@@ -62,6 +62,10 @@ on:
         options:
           - tvi3315a:rk3399-tvi3315a.dtb/sw799:rk3399-bozz-sw799.dtb
           - none
+      openwrt_armsr:
+        description: "set rootfs download addr"
+        required: true
+        default: ""
       openwrt_kernel:
         description: "Select kernel version"
         required: false
