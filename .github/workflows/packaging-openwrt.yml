@@ -181,7 +181,7 @@ jobs:
           SELECT_PACKITPATH: openwrt_packit
           PACKAGE_SOC: ${{ inputs.openwrt_soc }}
           KERNEL_REPO_URL: ${{ inputs.kernel_repo }}
-          KERNEL_VERSION_NAME: ${{ inputs.openwrt_kernel }}
+          KERNEL_VERSION: ${{ inputs.openwrt_kernel }}
           KERNEL_AUTO_LATEST: ${{ inputs.auto_kernel }}
           CUSTOMIZE_RK3399: ${{ inputs.customize_rk3399 }}
           SCRIPT_DIY_PATH: ${{ inputs.script_diy_path }}
